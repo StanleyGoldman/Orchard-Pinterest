@@ -1,0 +1,10 @@
+﻿Name: Pinterest Button
+AntiForgery: enabled
+Author: Stanley Goldman
+Version: 0.1.0
+OrchardVersion: 0.1.0
+Description: Pinterest Widget Suite
+FeatureDescription: Pinterest Pin It Button
+Category: Pinterest
+Dependencies: Orchard.Widgets
+Tags: Widget, Pinterest, Share
