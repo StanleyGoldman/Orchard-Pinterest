@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Orchard.UI.Resources
+@{
+    Script.Include("//assets.pinterest.com/js/pinit.js").AtLocation(ResourceLocation.Head);
+    
     var doValue = Model.AnyImage ? "buttonBookmark" : "buttonPin";
 
     string href = "//pinterest.com/pin/create/button/";
