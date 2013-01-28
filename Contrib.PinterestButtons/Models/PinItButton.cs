@@ -18,9 +18,9 @@ namespace Contrib.PinterestButtons.Models
         {
             PinCount = "standard";
             AnyImage = false;
-            Url = "like";
-            Description = "arial";
-            Image = "arial";
+            Url = null;
+            Description = null;
+            Image = null;
         }
     }
 

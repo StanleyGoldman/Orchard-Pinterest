@@ -1,4 +1,11 @@
 ﻿@model Contrib.PinterestButtons.Models.PinItButtonPart
+@{
+    var dropDownList = new[] {
+        new SelectListItem {Text = "Above", Value = "above", Selected = Model.PinCount == "above"},
+        new SelectListItem {Text = "Beside", Value = "beside", Selected = Model.PinCount == "beside"},
+        new SelectListItem {Text = "Don't Show", Value = "none", Selected = Model.PinCount == "none"}
+    };
+}
 <fieldset>
     <legend>Pin it Fields</legend>
 
@@ -6,7 +13,7 @@
         @Html.LabelFor(model => model.PinCount)
     </div>
     <div class="editor-field">
-        @Html.TextBoxFor(model => model.PinCount)
+        @Html.DropDownListFor(model => model.PinCount, dropDownList)
         @Html.ValidationMessageFor(model => model.PinCount)
     </div>
 
