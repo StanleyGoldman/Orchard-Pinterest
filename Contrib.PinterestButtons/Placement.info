@@ -1,5 +1,5 @@
 ﻿<Placement>
-  <Place Parts_PinItButton="Content:11;TripelFirst:12"/>
+  <Place Parts_PinItButton="Content:11"/>
 
   <Match DisplayType="SummaryAdmin">
     <Place Parts_PinItButton="-"/>

@@ -10,24 +10,8 @@ namespace Contrib.PinterestButtons.Drivers
     [OrchardFeature("Contrib.PinterestButtons")]
     public class PinItButtonPartDriver : ContentPartDriver<PinItButtonPart>
     {
-        private readonly IWorkContextAccessor _workContextAccessor;
-
-        public PinItButtonPartDriver(IWorkContextAccessor workContextAccessor) {
-            _workContextAccessor = workContextAccessor;
-        }
-
         protected override DriverResult Display(PinItButtonPart part, string displayType, dynamic shapeHelper)
         {
-            var shape = shapeHelper.Parts_PinItButton(
-                     PinCount: part.PinCount,
-                     AnyImage: part.AnyImage,
-                     Url: part.Url,
-                     Image: part.Image,
-                     Description: part.Description
-                    );
-
-            var zones = _workContextAccessor.GetContext().Layout.Zones;
-
             return ContentShape("Parts_PinItButton",
                 () => shapeHelper.Parts_PinItButton(
                      PinCount: part.PinCount,
