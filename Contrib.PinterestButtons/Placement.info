@@ -1,0 +1,9 @@
+﻿<Placement>
+  <Place Parts_PinItButton="Content:11;TripelFirst:12"/>
+
+  <Match DisplayType="SummaryAdmin">
+    <Place Parts_PinItButton="-"/>
+  </Match>
+
+  <Place Parts_PinItButton_Edit="Content:7.5"/>
+</Placement>
