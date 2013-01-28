@@ -9,6 +9,6 @@
         href = string.Format("{0}?url={1}&media={2}&description={3}", href, Html.Encode(Model.Url), Html.Encode(Model.Image), Html.Encode(Model.Description));
     }
 }
-<a data-pin-config="@Model.PinCount" href="//pinterest.com/pin/create/button/" data-pin-do="@doValue" href="@href">
+<a data-pin-config="@Model.PinCount" data-pin-do="@doValue" href="@href">
     <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" />
 </a>
