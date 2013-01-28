@@ -6,9 +6,9 @@ using Orchard.Environment.Extensions;
 namespace Contrib.PinterestButtons.Handlers
 {
     [OrchardFeature("Contrib.PinterestButtons")]
-    public class PinItButtonHandler : ContentHandler
+    public class FollowButtonHandler : ContentHandler
     {
-        public PinItButtonHandler(IRepository<PinterestPinItButtonRecord> repository)
+        public FollowButtonHandler(IRepository<PinterestFollowButtonRecord> repository)
         {
             Filters.Add(StorageFilter.For(repository));
         }

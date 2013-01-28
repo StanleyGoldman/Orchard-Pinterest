@@ -6,7 +6,7 @@ using Orchard.Environment.Extensions;
 namespace Contrib.PinterestButtons.Models
 {
     [OrchardFeature("Contrib.PinterestButtons")]
-    public class PinItButtonRecord : ContentPartRecord
+    public class PinterestPinItButtonRecord : ContentPartRecord
     {
         public virtual string PinCount { get; set; }
         public virtual bool AnyImage { get; set; }
@@ -14,7 +14,7 @@ namespace Contrib.PinterestButtons.Models
         public virtual string Image { get; set; }
         public virtual string Description { get; set; }
 
-        public PinItButtonRecord()
+        public PinterestPinItButtonRecord()
         {
             PinCount = "standard";
             AnyImage = false;
@@ -25,7 +25,7 @@ namespace Contrib.PinterestButtons.Models
     }
 
     [OrchardFeature("Contrib.PinterestButtons")]
-    public class PinItButtonPart : ContentPart<PinItButtonRecord>
+    public class PinterestPinItButtonPart : ContentPart<PinterestPinItButtonRecord>
     {
         [Required]
         public string PinCount

@@ -1,6 +1,6 @@
 ﻿@using Orchard.UI.Resources
 @{
-    Script.Include("//assets.pinterest.com/js/pinit.js").AtLocation(ResourceLocation.Head);
+    Script.Require("pinit");
     
     var doValue = Model.AnyImage ? "buttonBookmark" : "buttonPin";
 
