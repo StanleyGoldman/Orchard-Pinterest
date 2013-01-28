@@ -23,5 +23,16 @@ namespace Contrib.PinterestButtons {
 
             return 1;
         }
+
+        public int UpdateFrom1()
+        {
+            ContentDefinitionManager.AlterTypeDefinition("PinItButtonWidget", cfg => cfg
+                .WithPart("PinItButtonPart")
+                .WithPart("WidgetPart")
+                .WithPart("CommonPart")
+                .WithSetting("Stereotype", "Widget"));
+
+            return 2;
+        }
     }
 }
