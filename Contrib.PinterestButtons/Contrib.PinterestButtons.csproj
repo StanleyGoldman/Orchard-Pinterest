@@ -64,6 +64,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\pinit-button-editor.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\Web.config" />
@@ -86,6 +87,7 @@
     <Compile Include="Handlers\PinItButtonHandler.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\PinItButton.cs" />
+    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -100,9 +102,6 @@
     <Content Include="Placement.info">
       <SubType>Designer</SubType>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Parts\PinItButton.Script.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
