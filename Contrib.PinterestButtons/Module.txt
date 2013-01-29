@@ -1,6 +1,7 @@
 ﻿Name: Pinterest Buttons
 AntiForgery: enabled
 Author: Stanley Goldman
+Website: https://github.com/StanleyGoldman/Orchard-Pinterest
 Version: 0.1.0
 OrchardVersion: 0.1.0
 Description: Pinterest Widget Suite
