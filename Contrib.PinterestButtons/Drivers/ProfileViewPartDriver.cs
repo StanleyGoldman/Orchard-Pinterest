@@ -43,12 +43,18 @@ namespace Contrib.PinterestButtons.Drivers
 
         protected override void Exporting(PinterestProfileViewPart part, ExportContentContext context)
         {
-            base.Exporting(part, context);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("Username", part.Username);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("ImageWidth", part.ImageWidth);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("BoardHeight", part.BoardHeight);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("BoardWidth", part.BoardWidth);
         }
 
         protected override void Importing(PinterestProfileViewPart part, ImportContentContext context)
         {
-            base.Importing(part, context);
+            part.Username = context.Attribute(part.PartDefinition.Name, "Username");
+            part.ImageWidth = Convert.ToInt32(context.Attribute(part.PartDefinition.Name, "ImageWidth"));
+            part.BoardHeight = Convert.ToInt32(context.Attribute(part.PartDefinition.Name, "BoardHeight"));
+            part.BoardWidth = context.Attribute(part.PartDefinition.Name, "BoardWidth");
         }
     }
 }

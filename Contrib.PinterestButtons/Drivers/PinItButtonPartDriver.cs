@@ -1,4 +1,5 @@
-﻿using Contrib.PinterestButtons.Models;
+﻿using System;
+using Contrib.PinterestButtons.Models;
 using Orchard;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
@@ -41,12 +42,20 @@ namespace Contrib.PinterestButtons.Drivers
 
         protected override void Exporting(PinterestPinItButtonPart part, ExportContentContext context)
         {
-            base.Exporting(part, context);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("AnyImage", part.AnyImage);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("Description", part.Description);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("Image", part.Image);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("PinCount", part.PinCount);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("Url", part.Url);
         }
 
         protected override void Importing(PinterestPinItButtonPart part, ImportContentContext context)
         {
-            base.Importing(part, context);
+            part.AnyImage = Convert.ToBoolean(context.Attribute(part.PartDefinition.Name, "AnyImage"));
+            part.Description = context.Attribute(part.PartDefinition.Name, "Description");
+            part.Image = context.Attribute(part.PartDefinition.Name, "Image");
+            part.PinCount = context.Attribute(part.PartDefinition.Name, "PinCount");
+            part.Url = context.Attribute(part.PartDefinition.Name, "Url");
         }
     }
 }

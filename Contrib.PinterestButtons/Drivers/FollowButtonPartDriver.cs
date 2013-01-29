@@ -38,12 +38,14 @@ namespace Contrib.PinterestButtons.Drivers
 
         protected override void Exporting(PinterestFollowButtonPart part, ExportContentContext context)
         {
-            base.Exporting(part, context);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("Username", part.Username);
+            context.Element(part.PartDefinition.Name).SetAttributeValue("Name", part.Name);
         }
 
         protected override void Importing(PinterestFollowButtonPart part, ImportContentContext context)
         {
-            base.Importing(part, context);
+            part.Username = context.Attribute(part.PartDefinition.Name, "Username");
+            part.Name = context.Attribute(part.PartDefinition.Name, "Name");
         }
     }
 }
