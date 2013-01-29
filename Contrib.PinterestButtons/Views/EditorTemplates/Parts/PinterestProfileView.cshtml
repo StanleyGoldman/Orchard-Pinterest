@@ -1,0 +1,36 @@
+﻿@model Contrib.PinterestButtons.Models.PinterestProfileViewPart
+<fieldset>
+    <legend>Pinterest Profile View Fields</legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Username)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ImageWidth)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.ImageWidth)
+        @Html.ValidationMessageFor(model => model.ImageWidth)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.BoardHeight)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.BoardHeight)
+        @Html.ValidationMessageFor(model => model.BoardHeight)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.BoardWidth)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.BoardWidth)
+        @Html.ValidationMessageFor(model => model.BoardWidth)
+    </div>
+</fieldset>

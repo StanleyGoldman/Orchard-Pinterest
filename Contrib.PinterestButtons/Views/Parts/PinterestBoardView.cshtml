@@ -1,0 +1,23 @@
+﻿@{
+    var href = string.Format("http://pinterest.com/{0}/{1}/", Model.Username, Model.Board);
+    var imageWidth = Model.ImageWidth < 60 ? 60 : (Model.ImageWidth == 92 ? null  : Model.ImageWidth);
+    var boardHeight = Model.BoardHeight < 60 ? 60 : (Model.BoardHeight == 175 ? null : Model.BoardHeight);
+
+    string boardWidth = null;
+
+    if (Model.BoardWidth != null)
+    {
+        int boardWidthInteger;
+        if (int.TryParse(Model.BoardWidth, out boardWidthInteger))
+        {
+            if (boardWidthInteger != 60) {
+                boardWidth = boardWidthInteger.ToString();
+            }
+        }
+        else
+        {
+            boardWidth = Model.BoardWidth == "auto" ? null : Model.BoardWidth;
+        }
+    }
+}
+<a data-pin-do="embedBoard" href="@href" data-pin-scale-width="@imageWidth" data-pin-scale-height="@boardHeight" data-pin-board-width="@boardWidth"></a>

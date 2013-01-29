@@ -1,12 +1,18 @@
 ﻿<Placement>
   <Place Parts_PinterestPinItButton="Content:11"/>
   <Place Parts_PinterestFollowButton="Content:11"/>
+  <Place Parts_PinterestBoardView="Content:11"/>
+  <Place Parts_PinterestProfileView="Content:11"/>
 
   <Match DisplayType="SummaryAdmin">
     <Place Parts_PinterestPinItButton="-"/>
     <Place Parts_PinterestFollowButton="-"/>
+    <Place Parts_PinterestBoardView="-"/>
+    <Place Parts_PinterestProfileView="-"/>
   </Match>
 
   <Place Parts_PinterestPinItButton_Edit="Content:7.5"/>
   <Place Parts_PinterestFollowButton_Edit="Content:7.5"/>
+  <Place Parts_PinterestBoardView_Edit="Content:7.5"/>
+  <Place Parts_PinterestProfileView_Edit="Content:7.5"/>
 </Placement>
