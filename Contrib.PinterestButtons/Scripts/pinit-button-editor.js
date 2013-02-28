@@ -6,9 +6,9 @@
 
         var clickFunction = function () {
             if (checkbox.is(":checked")) {
-                anyImageDependantField.show();
-            } else {
                 anyImageDependantField.hide();
+            } else {
+                anyImageDependantField.show();
             }
         };
 
