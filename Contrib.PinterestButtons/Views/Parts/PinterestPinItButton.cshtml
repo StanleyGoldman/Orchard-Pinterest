@@ -1,11 +1,11 @@
 ﻿@{
     Script.Require("pinit");
-    
-    var doValue = Model.AnyImage ? "buttonBookmark" : "buttonPin";
+
+    var doValue = Model.AnyImage ? "buttonPin" : "buttonBookmark";
 
     string href = "//pinterest.com/pin/create/button/";
     if (!Model.AnyImage) {
-        href = string.Format("{0}?url={1}&media={2}&description={3}", href, Html.Encode(Model.Url), Html.Encode(Model.Image), Html.Encode(Model.Description));
+        href = string.Format("{0}?url={1}&media={2}&description={3}", href, HttpUtility.UrlEncode(Model.Url), HttpUtility.UrlEncode(Model.Image), Html.Encode(Model.Description));
     }
 }
 <a data-pin-config="@Model.PinCount" data-pin-do="@doValue" href="@href">
