@@ -5,7 +5,7 @@ namespace Contrib.PinterestButtons {
         public void BuildManifests(ResourceManifestBuilder builder) {
             var manifest = builder.Add();
             manifest.DefineScript("PinItButtonEditor").SetUrl("pinit-button-editor.js").SetDependencies("jQuery");
-            manifest.DefineScript("pinit").SetUrl("pinit.js");
+            manifest.DefineScript("pinit").SetUrl("//assets.pinterest.com/js/pinit.js");
         }
     }
 }
